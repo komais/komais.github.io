@@ -150,11 +150,20 @@
 </ul>
 </li>
 </ul>
-
+<h3 id="基因组特征和染色质互作的关系"><a href="#基因组特征和染色质互作的关系" class="headerlink" title="基因组特征和染色质互作的关系"></a>基因组特征和染色质互作的关系</h3><pre><code>* 方法：
+    * 比较了染色质互作和多个基因组data set的关系，包括组蛋白修饰（ChIP-seq和芯片），DNA甲基化（BS）和RNA-seq。
+    * binsize 2.5K
+    * 使用下图展示到一起。其中左边和最下一排是染色体的坐标，上面和右边是chip的强弱，根据这些对互作进行重新排序。可以很容易看出表观marker同互作的关联。
+    ![Fig3 ChIP和互作的联合展示](https://ooo.0o0.ooo/2017/06/18/5945f8ad948bd.png)
+* 结果
+    * 沉默型marker(甲基化，H3K9me2 H3K27me1)同染色体互作表现出了很强的相关性。这和之前的富含这些标记的环着丝粒互作强的结论一致。这些heavily DNA同染色体的其他区域互作很少。表明这些marker为了维护环着丝粒区域的互作，而避免其他互作。 如果使用permutation，去除这些环着丝粒区域，互作patter同H3K9me2修饰区域没有很强的关联性，表明 Fig3A主要由于环着丝粒的互作相关。
+    * 激活型marker(H3K4me1 , me2 , me3)同互作呈负相关。 表明转录激活区域通常没有不正常的高互作。 这些区域也不位于环着丝粒区域。 
+    * 表达和互作： 没有发现互作和高表达的相关性。这和之前的文章，RNA聚合酶II在常染色质上分布均匀的结果相一致。
+</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/15/Hi-C_paper_0001/" data-id="cj425oc3s0000lwry4so2ju40" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/15/Hi-C_paper_0001/" data-id="cj4272q1y000090ry0c25zvvr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -199,7 +208,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/15/hello-world/" data-id="cj425oc440001lwry22r9v98j" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/15/hello-world/" data-id="cj4272q2a000290rynggvsndu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -244,7 +253,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/12/paper/words/" data-id="cj425oc510003lwryvyvlcs45" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/12/paper/words/" data-id="cj4272q3c000390ryw4766l7o" class="article-share-link">Share</a>
       
       
     </footer>
