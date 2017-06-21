@@ -94,12 +94,38 @@
 <li>对ctDNA的检测中，目前存在着 灵敏度不高，只能针对特定人群， 并且需要针对个体的特异性优化。</li>
 <li>CAPP方法：<ul>
 <li>优化建库，起始量低</li>
-<li>用多个生信方法，选择合适的 标记。<br><img src="https://ooo.0o0.ooo/2017/06/21/594a03964cbea.png" alt="CAPP方法概览"><h1 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h1></li>
+<li>用多个生信方法，选择合适的 标记。<br><img src="https://ooo.0o0.ooo/2017/06/21/594a03964cbea.png" alt="CAPP方法概览"><h1 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h1><h2 id="选择marker位点"><a href="#选择marker位点" class="headerlink" title="选择marker位点"></a>选择marker位点</h2></li>
 </ul>
 </li>
-<li>选择marker位点<ul>
 <li>选择COSMIC中potential driver gene，位于exon的，且是recurrent的突变。</li>
 <li>使用TCGA的WES数据，选择出一个最小的 可以使每个病人missense 突变最大的集合。<br><img src="http://orvv8ywx5.bkt.clouddn.com/17-6-21/20574355.jpg" alt="FigS1 如何选择位点？"></li>
+<li>上图中，左图每个exon的RI的指数的频率分布，右图是 不同exon不同人数的频率分布。 选择合适exon来作为标记。</li>
+<li>加入了fusion的位点，并且研究了新的算法</li>
+<li>最终panel包含了五个方面的数据：phase1是已知的dirver gene，phase2-4是使用WES数据找出来的recurrent SNV，phase5-6是额外的预测driver gene和fusion。<br><img src="http://orvv8ywx5.bkt.clouddn.com/17-6-21/74102941.jpg" alt="Fig1b 芯片五个方面"></li>
+<li>最终选择了521个外显子，13个内含子，包括了139个基因。区域为125k。 这些覆盖了96%的病人。用另一个数据验证，覆盖了88%的病人，评价每个人4个突变。高于随机抽样的频率。<br><img src="http://orvv8ywx5.bkt.clouddn.com/17-6-21/51556833.jpg" alt="Fig1C"></li>
+</ul>
+<h2 id="方法优化和性能评估"><a href="#方法优化和性能评估" class="headerlink" title="方法优化和性能评估"></a>方法优化和性能评估</h2><ul>
+<li>方法：<ul>
+<li>测序深度： 10000X</li>
+<li>样品： <ul>
+<li>2个NSCLC 细胞系 ， 16个样品，不同的浓度</li>
+<li>17个primary tumor样品 和 对应的外周血 样品 </li>
+<li>5个正常人血浆 </li>
+<li>13个肿瘤病人，35个样品</li>
+</ul>
+</li>
+<li>评估芯片的表现<ul>
+<li>使用健康正常plasma，观察捕获的有效性和一致性。捕获片段长度为170bp，<br><img src="http://orvv8ywx5.bkt.clouddn.com/17-6-21/32698967.jpg" alt="Fig2a 捕获片段长度分布 每个探针的深度 "></li>
+<li>影响CAPP的效果有以下几个原因：<ul>
+<li>起始量  ： recovery rate &gt; 49%</li>
+<li>样品交叉污染 : 通过使用纯和SNP来判断，交叉污染率为 0.06%</li>
+<li>捕获试剂的allelic bias ： 研究杂合germline SNP的allelic skew ； 研究40个血浆样品的非ref的频率突变，不包括tumor和germeline的突变。</li>
+<li>PCR或者测序错误</li>
+</ul>
+</li>
+<li>背景噪音的均值为0.006%<br><img src="http://orvv8ywx5.bkt.clouddn.com/17-6-21/59576301.jpg" alt="Fig2d 背景噪音的确定"></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -107,7 +133,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/19/Med-paper-0002/" data-id="cj46lx9xk0003fcry2k19i6ym" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/19/Med-paper-0002/" data-id="cj46pikg500031gryy112qupe" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Med/">Med</a></li></ul>
@@ -199,7 +225,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/18/Med-paper-0001/" data-id="cj46lx9x90001fcryf3rsc6bc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/18/Med-paper-0001/" data-id="cj46pikga00041grybqan82z9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Med/">Med</a></li></ul>
@@ -360,7 +386,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/15/Hi-C_paper_0001/" data-id="cj46lx9wy0000fcryxqav4xk3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/15/Hi-C_paper_0001/" data-id="cj46pikfm00001gryro7jid0a" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hi-C/">Hi-C</a></li></ul>
@@ -407,7 +433,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/15/hello-world/" data-id="cj46lx9xm0004fcryrrx6rk5i" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/15/hello-world/" data-id="cj46pikfw00011gryihcqssux" class="article-share-link">Share</a>
       
       
     </footer>
@@ -454,7 +480,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/12/paper/words/" data-id="cj46lx9yq000afcryb0k0uv9m" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/12/paper/words/" data-id="cj46pikhp000a1gryzagsgc15" class="article-share-link">Share</a>
       
       
     </footer>
