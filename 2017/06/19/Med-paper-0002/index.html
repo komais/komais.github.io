@@ -18,7 +18,7 @@
 <meta property="og:image" content="http://orvv8ywx5.bkt.clouddn.com/17-6-21/51556833.jpg">
 <meta property="og:image" content="http://orvv8ywx5.bkt.clouddn.com/17-6-21/32698967.jpg">
 <meta property="og:image" content="http://orvv8ywx5.bkt.clouddn.com/17-6-21/59576301.jpg">
-<meta property="og:updated_time" content="2017-06-21T07:58:14.332Z">
+<meta property="og:updated_time" content="2017-06-22T07:57:01.458Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Med_paper_0002">
 <meta name="twitter:description" content="title: An ultrasensitive method for quantitating circulating tumor DNA with broad patient coverage杂志： nature medicineIF ：29.886单位 ：Institute for Stem Cell Biology and Regenerative Medicine, Stanford U">
@@ -115,7 +115,6 @@
 <li>最终选择了521个外显子，13个内含子，包括了139个基因。区域为125k。 这些覆盖了96%的病人。用另一个数据验证，覆盖了88%的病人，评价每个人4个突变。高于随机抽样的频率。<br><img src="http://orvv8ywx5.bkt.clouddn.com/17-6-21/51556833.jpg" alt="Fig1C"></li>
 </ul>
 <h2 id="方法优化和性能评估"><a href="#方法优化和性能评估" class="headerlink" title="方法优化和性能评估"></a>方法优化和性能评估</h2><ul>
-<li>方法：<ul>
 <li>测序深度： 10000X</li>
 <li>样品： <ul>
 <li>2个NSCLC 细胞系 ， 16个样品，不同的浓度</li>
@@ -136,14 +135,44 @@
 <li>背景噪音的均值为0.006%<br><img src="http://orvv8ywx5.bkt.clouddn.com/17-6-21/59576301.jpg" alt="Fig2d 背景噪音的确定"></li>
 </ul>
 </li>
+<li>去除癌前组织产生的非germline DNA对方法的影响<ul>
+<li>如果存在该情况，那么已知的driver gene会比噪音高一些。发现确实有差异，例如突变热点TP53,R175H确实比其他的高些。</li>
+<li>所以针对这个来确定下限。</li>
 </ul>
 </li>
+<li>确定检测限 和 回归系数。<ul>
+<li>使用不同浓度的NSCLC的DNA。</li>
+</ul>
+</li>
+</ul>
+<h2 id="体细胞突变检测和肿瘤负荷定量"><a href="#体细胞突变检测和肿瘤负荷定量" class="headerlink" title="体细胞突变检测和肿瘤负荷定量"></a>体细胞突变检测和肿瘤负荷定量</h2><ul>
+<li>样品：<ul>
+<li>17个病人的 福尔马林样品，穿刺样品，恶性胸膜液</li>
+</ul>
+</li>
+<li>在5000x的时候，肿瘤样品足够</li>
+<li>不吸烟的患者，几乎没有fusion，并且SNV的个数也少。 </li>
+<li>去掉fusion后，每个病人发现了6个SNV，跟之前的估计相符合。</li>
+<li>评估CAPP-seq在疾病监测和最小残留的检测<ul>
+<li><strong>ctDNA检测index（核心啊）</strong> : 类似于假阳性率，基于决策树的方法。没看懂，具体看文献吧。This index is analogous to a false-positive rate and is based on a decision tree in which fusion breakpoints take precedence because of their nonexistent background and in which P values from multiple reporter types are integrated (Online Methods).</li>
+<li>AUC为0.95, 灵敏度 85% , 特异性 96%</li>
+<li>I期的灵敏度 50%， 其余的为100%</li>
+</ul>
+</li>
+</ul>
+<h2 id="监测肿瘤负荷"><a href="#监测肿瘤负荷" class="headerlink" title="监测肿瘤负荷"></a>监测肿瘤负荷</h2><ul>
+<li>使用样品进行长期监测</li>
+</ul>
+<h2 id="无创筛查"><a href="#无创筛查" class="headerlink" title="无创筛查"></a>无创筛查</h2><h1 id="讨论"><a href="#讨论" class="headerlink" title="讨论"></a>讨论</h1><ul>
+<li>随机噪音低，生物影响低，做到tumor burden的定量。</li>
+<li>可以使用barcoding技术来减少PCR错误，</li>
+<li>对CNV的定量不准确</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/19/Med-paper-0002/" data-id="cj46pikg500031gryy112qupe" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/19/Med-paper-0002/" data-id="cj485817p0001ycryon1jhubb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Med/">Med</a></li></ul>
