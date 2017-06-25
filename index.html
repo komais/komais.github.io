@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -60,6 +60,130 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-Agri_paper_0001" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/25/Agri_paper_0001/" class="article-date">
+  <time datetime="2017-06-25T05:29:17.000Z" itemprop="datePublished">2017-06-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/25/Agri_paper_0001/">生物学DNA解读</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="标题-improved-maize-reference-genome-with-single-molecule-technologies"><a href="#标题-improved-maize-reference-genome-with-single-molecule-technologies" class="headerlink" title="标题 improved maize reference genome with single-molecule technologies"></a>标题 improved maize reference genome with single-molecule technologies</h1><h2 id="杂志-Nature"><a href="#杂志-Nature" class="headerlink" title="杂志 Nature"></a>杂志 Nature</h2><h2 id="IF-38-14"><a href="#IF-38-14" class="headerlink" title="IF : 38.14"></a>IF : 38.14</h2><h2 id="作者：-Yinping-Jiao"><a href="#作者：-Yinping-Jiao" class="headerlink" title="作者： Yinping Jiao"></a>作者： Yinping Jiao</h2><h2 id="单位：-Cold-Spring-Harbor-Laboratory-Cold-Spring-Harbor-New-York-11724-USA"><a href="#单位：-Cold-Spring-Harbor-Laboratory-Cold-Spring-Harbor-New-York-11724-USA" class="headerlink" title="单位： Cold Spring Harbor Laboratory, Cold Spring Harbor, New York 11724, USA"></a>单位： Cold Spring Harbor Laboratory, Cold Spring Harbor, New York 11724, USA</h2><h2 id="性质：-letter"><a href="#性质：-letter" class="headerlink" title="性质： letter"></a>性质： letter</h2><h2 id="摘要："><a href="#摘要：" class="headerlink" title="摘要："></a>摘要：</h2><ul>
+<li>之前组装的很多植物基因组存在着片段过多，缺少复杂重复区域的问题。</li>
+<li>使用三代，相对于之前版本，contig长度延长了52倍，对于基因间区和着丝粒区提升很大。</li>
+<li>对重复区域研究，发现了130K个完整的转座原件，可以对转座原件的谱系研究有很大帮助</li>
+<li>使用全长转录本测序，对基因组进行注释。</li>
+<li>比较基因组研究，发现两个自交系中，存在着广泛的低基因密度区域和玉米谱系特异基因的缺失</li>
+</ul>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><ul>
+<li>玉米的基因组发布于2009，有100K个contig，太碎了。</li>
+</ul>
+<h1 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h1><h2 id="组装结果"><a href="#组装结果" class="headerlink" title="组装结果"></a>组装结果</h2><ul>
+<li>组装过程如下： 组装-&gt;评估-&gt;优化contig-&gt;连scaffold-&gt;根据图谱，构建染色体-&gt;校正<br><img src="http://orvv8ywx5.bkt.clouddn.com/17-6-25/47195258.jpg" alt="Fig1 "></li>
+<li>数据量<ul>
+<li>SMRT : 65X</li>
+</ul>
+</li>
+<li>结果：<ul>
+<li>contig个数2958个，一半的contig长度大于1.2M，N50为1.18M，以前的只有5k</li>
+<li>scaffold个数为625个，N50为9.56M</li>
+<li>使用BAC文库和遗传图谱，来构建染色体</li>
+<li>基因组大小为2.1G，只有2522个gap，估计平均gap长度为27k。</li>
+</ul>
+</li>
+</ul>
+<h2 id="组装评估"><a href="#组装评估" class="headerlink" title="组装评估"></a>组装评估</h2><ul>
+<li>相对于以前的版本：<ul>
+<li>序列相似度 99.9%</li>
+<li>contig长度延长了52倍</li>
+<li>84%的BAC被一条long read覆盖。</li>
+<li>纠正了以前很多方向不对的环着丝粒区域</li>
+<li>20个arm中，有14个找到了端粒重复区域。</li>
+</ul>
+</li>
+<li>CENH3（着丝粒组蛋白H3）ChIP结果<ul>
+<li>发现着丝粒很正确的安置了<h2 id="基因注释"><a href="#基因注释" class="headerlink" title="基因注释"></a>基因注释</h2></li>
+</ul>
+</li>
+<li>使用全长转录本优化注释。<ul>
+<li>每个基因的转录本有之前的1.6个，增加到了3.3个</li>
+<li>提升了对调控区域的覆盖，降低了基因周边3k的gap，由20%降低到了1%，因此可以对TATA box，CCAAT box，Y patch motif等进行研究。调控区域的完善有助于表型的研究。<h2 id="进化分析"><a href="#进化分析" class="headerlink" title="进化分析"></a>进化分析</h2></li>
+</ul>
+</li>
+<li>同Sorghum（高梁）的进化分析<ul>
+<li>同Sorghum（梁）分歧后，玉米经历了加倍（diploidization）和gene loss。</li>
+<li>之前研究表明gene loss只在一套基因中发生，但是我们的组装结果表明，56％的高粱直系同源基因能比对到玉米亚基因组（指定为A，总大小1.16Gb），而仅24％能唯一地映射到亚基因组B（总大小0.63Gb）。</li>
+<li>在多倍体和功能冗余的考虑下，玉米应该有很多基因损失。通过与高粱、水稻、二穗短柄草和狗尾草的直系同源基因分析，发现了14%的基因有丢失。</li>
+<li>丢失的基因大多与免疫和抗逆有关。</li>
+</ul>
+</li>
+</ul>
+<h2 id="转座元件"><a href="#转座元件" class="headerlink" title="转座元件"></a>转座元件</h2><ul>
+<li>以前的版本只有1%的LTR，新版本中有1268M的完整的反转录转座子，还有其他很多的重复。</li>
+<li>通过研究重复序列的进化，可以得到物种的进化的相关结果</li>
+</ul>
+<h2 id="比较基因组"><a href="#比较基因组" class="headerlink" title="比较基因组"></a>比较基因组</h2><ul>
+<li>使用光学图谱，进行比较基因组分析: Ki11 和 W22 ,同B37进行结构比较<ul>
+<li>由于基因组差异大，Ki11中32%，W22中39% 限制酶切位点，可以比对到B37中。</li>
+<li>在着丝粒区域附近，比对较好，表明光学图谱和三代可以很好的解决重复问题。</li>
+<li>Ki11中32 ，W22中26% 表现出了结构变异，平均大小为20k</li>
+<li>说明品系间的差异还是很大的</li>
+</ul>
+</li>
+</ul>
+<h1 id="材料方法："><a href="#材料方法：" class="headerlink" title="材料方法："></a>材料方法：</h1><ul>
+<li>测三代，使用bionano</li>
+<li>组装：<ul>
+<li>PBcR-MHAP和Falcon</li>
+<li>Quiver修整contig</li>
+<li>RefAligner合并草图和光学图谱</li>
+<li>BAC: Mummer</li>
+</ul>
+</li>
+<li>注释：<ul>
+<li>LTRharvest</li>
+<li>LTRdigest</li>
+<li>SINE­Finder</li>
+<li>MGEScan­non­LTR</li>
+<li>MITE­hunter</li>
+<li>HelitronScanner</li>
+</ul>
+</li>
+<li>结构分析<ul>
+<li>RefSplit</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/25/Agri_paper_0001/" data-id="cj4c5wbai00008wryvx5oel2v" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/denovo/">denovo</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-Hi-C_paper_0002" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -137,7 +261,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/22/Hi-C_paper_0002/" data-id="cj4b3feaf00016ory1o2bb7he" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/06/22/Hi-C_paper_0002/" data-id="cj4c5wbb000038wryiu7tpg56" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hi-C/">Hi-C</a></li></ul>
@@ -250,7 +374,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/19/Med-paper-0002/" data-id="cj4b3feau00036ory7w4w5mfg" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/06/19/Med-paper-0002/" data-id="cj4c5wbb500048wryprfgu6ur" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Med/">Med</a></li></ul>
@@ -342,7 +466,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/18/Med-paper-0001/" data-id="cj4b3fedh000b6oryikhgrurz" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/06/18/Med-paper-0001/" data-id="cj4c5wbbc00058wrytdmg07b1" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Med/">Med</a></li></ul>
@@ -503,7 +627,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/15/Hi-C_paper_0001/" data-id="cj4b3fe9z00006oryn287z4au" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/06/15/Hi-C_paper_0001/" data-id="cj4c5wbas00018wrypsl91zq0" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hi-C/">Hi-C</a></li></ul>
@@ -550,7 +674,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/15/hello-world/" data-id="cj4b3fede000a6oryu6dh26kb" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/06/15/hello-world/" data-id="cj4c5wbbh00088wrykhxl69x9" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -594,12 +718,13 @@
 <li>chromocenter </li>
 <li>KNOT engaged element (KEE) </li>
 <li>gene loop:Laine et al. 2009; TanWong et al. 2009</li>
+<li>long terminal repeat</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/12/paper/words/" data-id="cj4b3fedc00096oryr26a14g1" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/06/12/paper/words/" data-id="cj4c5wbcq000g8wryhm7hh7g8" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -619,9 +744,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Labels</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hi-C/">Hi-C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Med/">Med</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hi-C/">Hi-C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Med/">Med</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/denovo/">denovo</a></li></ul>
     </div>
   </div>
 
@@ -629,16 +754,16 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Hi-C/" style="font-size: 10px;">Hi-C</a> <a href="/tags/Med/" style="font-size: 10px;">Med</a>
+      <a href="/tags/Hi-C/" style="font-size: 20px;">Hi-C</a> <a href="/tags/Med/" style="font-size: 20px;">Med</a> <a href="/tags/denovo/" style="font-size: 10px;">denovo</a>
     </div>
   </div>
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li></ul>
     </div>
@@ -648,9 +773,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/06/25/Agri_paper_0001/">生物学DNA解读</a>
+          </li>
         
           <li>
             <a href="/2017/06/22/Hi-C_paper_0002/">Hi-C 解读2</a>
@@ -668,10 +797,6 @@
             <a href="/2017/06/15/Hi-C_paper_0001/">Hi-C 解读1</a>
           </li>
         
-          <li>
-            <a href="/2017/06/15/hello-world/">Hello World</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -685,7 +810,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
