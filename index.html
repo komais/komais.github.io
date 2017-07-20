@@ -61,6 +61,175 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Med-paper-0003" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/08/Med-paper-0003/" class="article-date">
+  <time datetime="2017-07-08T07:51:35.000Z" itemprop="datePublished">2017-07-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/08/Med-paper-0003/">Med_paper_0002</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="title-Pan-cancer-network-analysis-identifies-combinations-of-rare-somatic-mutations-across-pathways-and-protein-complexes"><a href="#title-Pan-cancer-network-analysis-identifies-combinations-of-rare-somatic-mutations-across-pathways-and-protein-complexes" class="headerlink" title="title: Pan-cancer network analysis identifies combinations of rare somatic mutations across pathways and protein complexes"></a>title: Pan-cancer network analysis identifies combinations of rare somatic mutations across pathways and protein complexes</h1><h2 id="杂志：-nature-genetics"><a href="#杂志：-nature-genetics" class="headerlink" title="杂志： nature genetics"></a>杂志： nature genetics</h2><h2 id="IF-：27-959"><a href="#IF-：27-959" class="headerlink" title="IF ：27.959"></a>IF ：27.959</h2><h2 id="单位-：Department-of-Computer-Science-Brown-University-Providence-Rhode-Island-USA"><a href="#单位-：Department-of-Computer-Science-Brown-University-Providence-Rhode-Island-USA" class="headerlink" title="单位 ：Department of Computer Science, Brown University, Providence, Rhode Island,USA"></a>单位 ：Department of Computer Science, Brown University, Providence, Rhode Island,USA</h2><h2 id="作者-Mark-D-M-Leiserson"><a href="#作者-Mark-D-M-Leiserson" class="headerlink" title="作者 : Mark D M Leiserson"></a>作者 : Mark D M Leiserson</h2><h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><ul>
+<li>肿瘤导致很多的变异，长尾效应导致发现显著的基因和通路比较困难。</li>
+<li>对3281个样品，12个癌种，进行pan-cancer的分析，使用HotNet2软件。该软件克服了只能研究单个基因、单个通路和网络的问题。</li>
+<li>得到了16个显著的子网络，包括了常见的信号通路和 不常见的信号通路，例如凝聚素（cohesin），凝血酶（condensin）等。很多网络都有共发生的情况出现。</li>
+<li>这些网络包含了很多低频突变，已经确认在肿瘤中有作用。</li>
+<li>通过pan-cancer network分析，可以提供更新的治疗思路</li>
+</ul>
+<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><ol>
+<li>肿瘤突变的长尾效应：对此的解释是 突变的基因影响，多个信号通路和调控通路以及蛋白复合物一起发挥作用。</li>
+<li>目前对基因的通路分析存在问题<ul>
+<li>没有计算显著性</li>
+<li>没有鉴定出新通路</li>
+<li>power不够</li>
+<li>忽略了基因间的拓扑结构</li>
+</ul>
+</li>
+<li>开发了HotNet2，用于从全基因组的互作网络中发现突变的子网络。使用了 directed heat diffusion model（定向热扩散模型），评估单个基因中突变的显著性，同时考虑蛋白间的互作。</li>
+<li>发现了16个显著的子网络。很多其中的低频突变同已知的癌症相关基因进行互作，表明这些跟癌症有作用。</li>
+<li>高频突变是 山峰（moutains），低频是山丘（hills）</li>
+</ol>
+<h1 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h1><h2 id="利用HotNet2鉴定显著的突变子网络"><a href="#利用HotNet2鉴定显著的突变子网络" class="headerlink" title="利用HotNet2鉴定显著的突变子网络"></a>利用HotNet2鉴定显著的突变子网络</h2><ul>
+<li>数据：<ul>
+<li>外显子数据，array CGH，RNAseq</li>
+<li>总共3281个样品，12个癌种，19424个转录本，去除超突变的样品和去除在所有样品低表达的基因，得到11565个突变的基因。</li>
+<li>使用突变的频率作为heat，使用三个不同的互作网络，利用HotNet2来鉴定显著的subnetwork</li>
+</ul>
+</li>
+<li>结果<ul>
+<li>每个基因中在群体中，发生突变样品数的数量级有很大区别，尤其是那种超高表达的基因的存在，这样会导致HotNet1算法中出现问题。</li>
+<li>HotNet2考虑了方向性，所以能够比较好的避免该问题。</li>
+<li>合并所有结果，得到了16个子网络，包括condensin复合物和CLASP&amp;CLIP蛋白网络，鉴定了13个linker蛋白，出现在多个子网络中。</li>
+<li>这些网络包括常见的癌症通路：<ul>
+<li>TP53</li>
+<li>PI3K</li>
+<li>NOTCH</li>
+<li>RTK信号通路</li>
+</ul>
+</li>
+<li>研究子网络在不同肿瘤类型中的富集性。</li>
+<li>发现了许多novel driver gene</li>
+<li>研究富集基因是否 有过多的失活突变，或者用NMC对编码的蛋白序列，iPAC对蛋白结构，检查missense突变的cluster性</li>
+</ul>
+</li>
+</ul>
+<h2 id="子网络中的突变共发生和互斥发生的情况"><a href="#子网络中的突变共发生和互斥发生的情况" class="headerlink" title="子网络中的突变共发生和互斥发生的情况"></a>子网络中的突变共发生和互斥发生的情况</h2><ul>
+<li>有四对子网络共发生： TP53和NOTCH，TP53和RTK，PI3K和cohesin complex，PI3K和ASCOM</li>
+<li>互斥发生的突变一般位于同一个通路中<h2 id="TP53、PIK3CA和NOTCH网络"><a href="#TP53、PIK3CA和NOTCH网络" class="headerlink" title="TP53、PIK3CA和NOTCH网络"></a>TP53、PIK3CA和NOTCH网络</h2></li>
+<li>三大肿瘤相关子网络，中间有很多linker基因，表明通路间通信很多。</li>
+<li>HotNet2同时能鉴定出通路中新的基因，这些基因同已知的癌症相关，但是突变频率很低，同时在single gene test中不够显著。<h2 id="SWI-SNF-complex"><a href="#SWI-SNF-complex" class="headerlink" title="SWI/SNF complex"></a>SWI/SNF complex</h2></li>
+<li>鉴定复合物在肿瘤中的频率，同时发现新的基因ADNP</li>
+</ul>
+<h2 id="BAP1复合物和互作"><a href="#BAP1复合物和互作" class="headerlink" title="BAP1复合物和互作"></a>BAP1复合物和互作</h2><p>* </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/07/08/Med-paper-0003/" data-id="cj5byp2ei0008fsrywjn09dlp" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Med/">Med</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Hi-C_paper_0003" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/26/Hi-C_paper_0003/" class="article-date">
+  <time datetime="2017-06-26T05:29:17.000Z" itemprop="datePublished">2017-06-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/26/Hi-C_paper_0003/">Hi-C 解读3</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="标题-Hi-C-Analysis-in-Arabidopsis-Identifies-the-KNOT-a-Structure-with-Similarities-to-the-flamenco-Locus-of-Drosophila"><a href="#标题-Hi-C-Analysis-in-Arabidopsis-Identifies-the-KNOT-a-Structure-with-Similarities-to-the-flamenco-Locus-of-Drosophila" class="headerlink" title="标题 Hi-C Analysis in Arabidopsis Identifies the KNOT, a Structure with Similarities to the flamenco Locus of Drosophila"></a>标题 Hi-C Analysis in Arabidopsis Identifies the KNOT, a Structure with Similarities to the flamenco Locus of Drosophila</h1><h2 id="杂志-Molecular-Cell"><a href="#杂志-Molecular-Cell" class="headerlink" title="杂志 Molecular Cell"></a>杂志 Molecular Cell</h2><h2 id="IF"><a href="#IF" class="headerlink" title="IF :"></a>IF :</h2><h2 id="作者-Stefan-Grob"><a href="#作者-Stefan-Grob" class="headerlink" title="作者: Stefan Grob"></a>作者: Stefan Grob</h2><h2 id="机构：Institute-of-Plant-Biology-and-Zu-¨-rich-Basel-Plant-Science-Center-University-of-Zu-¨-rich-Zollikerstrasse-107-8008-Zu-¨-rich-Switzerland"><a href="#机构：Institute-of-Plant-Biology-and-Zu-¨-rich-Basel-Plant-Science-Center-University-of-Zu-¨-rich-Zollikerstrasse-107-8008-Zu-¨-rich-Switzerland" class="headerlink" title="机构：Institute of Plant Biology and Zu ¨ rich-Basel Plant Science Center, University of Zu ¨ rich, Zollikerstrasse 107, 8008 Zu ¨ rich, Switzerland"></a>机构：Institute of Plant Biology and Zu ¨ rich-Basel Plant Science Center, University of Zu ¨ rich, Zollikerstrasse 107, 8008 Zu ¨ rich, Switzerland</h2><h2 id="发布日期：-2014年"><a href="#发布日期：-2014年" class="headerlink" title="发布日期： 2014年"></a>发布日期： 2014年</h2><h1 id="摘要："><a href="#摘要：" class="headerlink" title="摘要："></a>摘要：</h1><ul>
+<li>染色质结构同表观状态有关</li>
+<li>细胞核的物理限制（核的大小）同折叠也有关系</li>
+<li>定义了一种叫KNOT的结构，是由5条染色体纠结一起的地方。KNOT参与原件（KEE）代表着常染色质中的异染色质岛。KEE也富含转座原件。</li>
+</ul>
+<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><ul>
+<li>DNA的功能行使离不开 压缩和解压缩这两个方面</li>
+<li>染色体臂被分割为多个不同染色质区域，有不同的压缩密度和表观状态。松的地方有H3K4me3标记，紧的地方有H3K27me3标记。</li>
+<li>互作频率呈指数下降的趋势。对于这个提出了两个假说： 一个是分形球模型，一个是平衡球模型。平衡球是多个球交织在一起，而分形球是像珍珠一样串起来。但平衡球没有knots。尽管以前的有些研究证明了主要是分形球，但是可能在 不同区域类型不一样，例如环着丝粒区域和常染色质区域会显示不同的模型。</li>
+<li>CROWDED NUCLEI蛋白会调节细胞核的大小，所以也会影响折叠。</li>
+<li>提出了一个比较Hi-C 数据的方法，获得了KNOT区域，很多个区域相互交叠在一起。</li>
+</ul>
+<h1 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h1><ul>
+<li>样品： wt，crwn1-1缺失，crwn4-1缺失<h2 id="染色体相邻性"><a href="#染色体相邻性" class="headerlink" title="染色体相邻性"></a>染色体相邻性</h2></li>
+<li>计算出每个反式互作的期望的频率，同实际值进行比较，计算相关性。可以看出有些互作高，有些互作低。<br><img src="http://orvv8ywx5.bkt.clouddn.com/17-6-26/25073747.jpg" alt="Fig2A "></li>
+</ul>
+<h2 id="Hi-C互作形成互作domain"><a href="#Hi-C互作形成互作domain" class="headerlink" title="Hi-C互作形成互作domain"></a>Hi-C互作形成互作domain</h2><ul>
+<li>主要的SDs（structure domain）集中于臂的常染色质 和 环着丝粒区的异染色质中。</li>
+<li>着丝粒和端粒互作都比较多。</li>
+</ul>
+<h2 id="PCA分析揭示了不同的染色质状态"><a href="#PCA分析揭示了不同的染色质状态" class="headerlink" title="PCA分析揭示了不同的染色质状态"></a>PCA分析揭示了不同的染色质状态</h2><ul>
+<li>观察到有些不连续的SD之间互作比较多，但是跟基因组其他位置的交互很少，这些为CSDs（compacted ）</li>
+<li>有一些是LSD(loose)，SD之间互作不多，但是跟其他区域互作多。</li>
+<li>对CSD和LSD做PCA分析，可能是拿各种甲基化状态，表观marker作为特征来做PCA，然后找出CSD和LSD相关性最高的特征值。<br>![Fig2C]<a href="http://orvv8ywx5.bkt.clouddn.com/17-6-26/74686285.jpg" target="_blank" rel="external">http://orvv8ywx5.bkt.clouddn.com/17-6-26/74686285.jpg</a>)</li>
+</ul>
+<h2 id="LSD-和CSD与表观标记的关系"><a href="#LSD-和CSD与表观标记的关系" class="headerlink" title="LSD 和CSD与表观标记的关系"></a>LSD 和CSD与表观标记的关系</h2><ul>
+<li>研究染色体臂上的LSD和CSD的表观差异。如下图。激活表达的组蛋白修饰和转录表达跟LSD相关性高，而CDS同抑制的相关。<br><img src="http://orvv8ywx5.bkt.clouddn.com/17-7-5/82309803.jpg" alt="LSD和CSD同不同基因组特征的区别"></li>
+<li>CSD和LSD的甲基化水平的不同,CSD中甲基化更高些，如下图。<br><img src="http://orvv8ywx5.bkt.clouddn.com/17-7-5/3625635.jpg" alt=""></li>
+</ul>
+<h2 id="影响核大小的突变-会影响互作"><a href="#影响核大小的突变-会影响互作" class="headerlink" title="影响核大小的突变 会影响互作"></a>影响核大小的突变 会影响互作</h2><ul>
+<li>crwn1-1缺失，crwn4-1缺失 会增加染色体环着丝粒区域互作，增加臂间的互作，轻微减少臂内的互作。</li>
+</ul>
+<h2 id="KNOT：特异的染色体互作"><a href="#KNOT：特异的染色体互作" class="headerlink" title="KNOT：特异的染色体互作"></a>KNOT：特异的染色体互作</h2><ul>
+<li>KEE： KNOT ENGAGED ELEMENT 。这些KEE间相互互作比较多，并且KEE有相同的motif，富含表观标记和基因区域，同时TE插入热点。<br><img src="http://orvv8ywx5.bkt.clouddn.com/17-7-20/21129362.jpg" alt="KEE互作"></li>
+</ul>
+<h1 id="讨论"><a href="#讨论" class="headerlink" title="讨论"></a>讨论</h1><ul>
+<li>染色体的邻居没有确定的搭配</li>
+<li>染色体的组织同表观和互作相关。</li>
+<li>核仁形态影响染色体间的互作，而不是domain结构</li>
+<li>KNOT也许起了作为转座子陷阱的角色，包含异染色质岛</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/26/Hi-C_paper_0003/" data-id="cj5byp2do0000fsrynnosotyb" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hi-C/">Hi-C</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Agri_paper_0001" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/06/25/Agri_paper_0001/" class="article-date">
@@ -173,7 +342,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/25/Agri_paper_0001/" data-id="cj4c5wbai00008wryvx5oel2v" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/06/25/Agri_paper_0001/" data-id="cj5byp2dx0001fsryma777l6v" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/denovo/">denovo</a></li></ul>
@@ -261,7 +430,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/22/Hi-C_paper_0002/" data-id="cj4c5wbb000038wryiu7tpg56" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/06/22/Hi-C_paper_0002/" data-id="cj5byp2ee0005fsrynkwdzfuh" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hi-C/">Hi-C</a></li></ul>
@@ -374,7 +543,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/19/Med-paper-0002/" data-id="cj4c5wbb500048wryprfgu6ur" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/06/19/Med-paper-0002/" data-id="cj5byp2f4000gfsryvykk6uw6" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Med/">Med</a></li></ul>
@@ -466,7 +635,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/18/Med-paper-0001/" data-id="cj4c5wbbc00058wrytdmg07b1" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/06/18/Med-paper-0001/" data-id="cj5byp2e60003fsryu7zbfso8" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Med/">Med</a></li></ul>
@@ -627,7 +796,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/15/Hi-C_paper_0001/" data-id="cj4c5wbas00018wrypsl91zq0" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/06/15/Hi-C_paper_0001/" data-id="cj5byp2e80004fsryto5cg5rd" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hi-C/">Hi-C</a></li></ul>
@@ -674,7 +843,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/15/hello-world/" data-id="cj4c5wbbh00088wrykhxl69x9" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/06/15/hello-world/" data-id="cj5byp2ft000ifsrybij1bb1d" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -710,7 +879,7 @@
 <li>chromosome: 染色体 ，由染色质折叠而来，是DNA结构的跟高级结构。</li>
 <li>chromatin: 染色质 ，DNA双螺旋同组蛋白结合，形成的复合物，称之为染色质。染色质进一步折叠，形成染色体。有开放（euchromatin）和 闭合（heterochromatin）之分。</li>
 <li>沉默的组蛋白标记： H3K9me2 ， H3K27me1 ，H3K27me3</li>
-<li>激活的组蛋白标记： H3K4me3</li>
+<li>激活的组蛋白标记： H3K4me3 ， H3K4me2， H3K36me3</li>
 <li>细胞核： 细胞核由核膜，核骨架，核仁，染色质组成。</li>
 <li>核仁： 参与核糖体的组成，核糖体产生后，进入细胞质。</li>
 <li>FISH：</li>
@@ -724,7 +893,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/12/paper/words/" data-id="cj4c5wbcq000g8wryhm7hh7g8" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/06/12/paper/words/" data-id="cj5byp2g5000jfsryfcwr7h4c" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -765,7 +934,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li></ul>
     </div>
   </div>
 
@@ -778,6 +947,14 @@
       <ul>
         
           <li>
+            <a href="/2017/07/08/Med-paper-0003/">Med_paper_0002</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/26/Hi-C_paper_0003/">Hi-C 解读3</a>
+          </li>
+        
+          <li>
             <a href="/2017/06/25/Agri_paper_0001/">生物学DNA解读</a>
           </li>
         
@@ -787,14 +964,6 @@
         
           <li>
             <a href="/2017/06/19/Med-paper-0002/">Med_paper_0002</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/18/Med-paper-0001/">Med_paper_0001</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/15/Hi-C_paper_0001/">Hi-C 解读1</a>
           </li>
         
       </ul>
